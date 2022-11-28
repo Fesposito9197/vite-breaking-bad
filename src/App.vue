@@ -13,10 +13,14 @@ export default {
 </script>
 
 <template>
-  
-  
+  <AppHeader/>
+  <AppMain/>
+  <AppFooter/>
 </template>
 
 <style lang="scss">
+body{
+  background-color: var(--my-primary-color)!important
+}
 @import './style/global.scss';
 </style>
