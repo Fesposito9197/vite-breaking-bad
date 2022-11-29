@@ -18,7 +18,7 @@ export default {
     v-model="store.category"
     @change="$emit('search')"
   >
-    <option disabled value="">Select Category</option>
+    <option value="">All</option>
     <option value="Breaking Bad">Breaking Bad</option>
     <option value="Better Call Saul">Better Call Saul</option>
   </select>
