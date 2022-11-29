@@ -1,6 +1,6 @@
 <script>
-import axios from "axios";
 import CardCharacters from "./CardCharacters.vue";
+import { store } from "../store";
 
 export default {
   name: "AppCharacters",
@@ -9,23 +9,23 @@ export default {
   },
   data() {
     return {
-      characters: [],
+      store,
     };
-  },
-  created() {
-    axios.get("https://www.breakingbadapi.com/api/characters").then((resp) => {
-      this.characters = resp.data;
-    });
   },
 };
 </script>
 
 <template>
   <div class="container pt-5 px-4">
-    <h3 class="text-white p-2">Found {{ characters.length }} Characters</h3>
+    <h3 class="text-white p-2">
+      Found {{ store.characters.length }} Characters
+    </h3>
     <div class="container pb-5">
       <div class="row px-4 gy-3">
-        <CardCharacters v-for="character in characters" :info="character" />
+        <CardCharacters
+          v-for="character in store.characters"
+          :info="character"
+        />
       </div>
     </div>
   </div>
