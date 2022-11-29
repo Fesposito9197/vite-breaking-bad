@@ -9,7 +9,7 @@ export default {
 
 <template>
   <div class="card-container">
-    <div class="my-card">
+    <div class="my-card h-100">
       <img class="img-fluid p-2" :src="info.img" :alt="info.name" />
       <h3 class="text-white text-center">{{ info.name }}</h3>
       <div class="series text-secondary text-center">{{ info.category }}</div>
@@ -21,7 +21,6 @@ export default {
 <style lang="scss" scoped>
 .my-card {
   background-color: var(--my-primary-color);
-  height: 100%;
 }
 .series {
   margin-top: 20px;

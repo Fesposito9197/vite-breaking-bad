@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <div class="container pt-5 px-4">
+  <div class="container bg-white pt-5 px-4">
     <h3 class="text-white p-2">
       Found {{ store.characters.length }} Characters
     </h3>
@@ -32,10 +32,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.container {
-  background-color: #fff;
-  h3 {
-    background-color: var(--my-secondary-color);
-  }
+h3 {
+  background-color: var(--my-secondary-color);
 }
 </style>
