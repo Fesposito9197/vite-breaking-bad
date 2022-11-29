@@ -22,7 +22,7 @@ export default {
 
 <template>
   <div class="container pt-5 px-4">
-    <h3 class="text-white p-2">Found 62 Characters</h3>
+    <h3 class="text-white p-2">Found {{ characters.length }} Characters</h3>
     <div class="container pb-5">
       <div class="row px-4 gy-3">
         <CardCharacters v-for="character in characters" :info="character" />
